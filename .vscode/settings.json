@@ -1,0 +1,20 @@
+{
+  // ✅ Format otomatis seperti Prettier
+  "editor.formatOnSave": true,
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+
+  // ✅ Pilih formatter (goimports lebih recommended)
+  "go.formatTool": "goimports", // atau "gofumpt" jika mau lebih strict
+
+  // ✅ Jalankan linter otomatis (mirip ESLint)
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package", // lint hanya di file yg disave
+  "go.lintFlags": [
+    "--fast" // lint cepat, abaikan pengecekan berat
+  ],
+
+  // ✅ Atur auto-save (opsional, biar format selalu jalan)
+  "files.autoSave": "onFocusChange"
+}
